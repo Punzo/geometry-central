@@ -165,11 +165,11 @@ set(HEADERS
   ${INCLUDE_ROOT}/utilities/vector3.ipp
 )
 
-add_library(GeometryCentralLib ${SRCS} ${HEADERS})
+add_library(GeometryCentral ${SRCS} ${HEADERS})
 
-set_target_properties(GeometryCentralLib PROPERTIES VERSION
+set_target_properties(GeometryCentral PROPERTIES VERSION
     ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT_VERSION_PATCH})
-target_link_libraries(GeometryCentralLib ${CadReader_LIBRARIES})
+target_link_libraries(GeometryCentral ${CadReader_LIBRARIES})
 
 include_directories(include/geometrycentral/numerical)
 include_directories(include/geometrycentral/pointcloud)
@@ -183,7 +183,7 @@ include_directories(include/geometrycentral/utilities)
 include(InstallRequiredSystemLibraries)
 
 # Install libraries
-install(TARGETS GeometryCentralLib DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
+install(TARGETS GeometryCentral DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
 
 # Install include files
 install(DIRECTORY ${CMAKE_SOURCE_DIR}/include/geometrycentral/numerical DESTINATION ${CMAKE_INSTALL_PREFIX}/include)
