@@ -9,10 +9,12 @@ set(PROJECT_VERSION_PATCH 0)
 # Find includes in the build directories
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
+include(FindOpenMP)
+
 set(CMAKE_CXX_STANDARD 11)
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O2 -ftree-vectorize -fPIC -std=c++11")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O2 -ftree-vectorize -fPIC -std=c++11")
-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -O2 -ftree-vectorize -fPIC -flto -std=c++11")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O2 -ftree-vectorize -fPIC -std=c++11 ${OpenMP_C_FLAGS}")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O2 -ftree-vectorize -fPIC -std=c++11 ${OpenMP_CXX_FLAGS}")
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -O2 -ftree-vectorize -fPIC -flto -std=c++11 ${OpenMP_EXE_LINKER_FLAGS}")
 set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib")
 set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
 add_definitions(-DNGC_SAFETY_CHECKS)
