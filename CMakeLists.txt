@@ -173,7 +173,8 @@ add_library(GeometryCentral ${SRCS} ${HEADERS})
 
 set_target_properties(GeometryCentral PROPERTIES VERSION
     ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT_VERSION_PATCH})
-target_link_libraries(GeometryCentral ${CadReader_LIBRARIES})
+set_target_properties(GeometryCentral PROPERTIES LINKER_LANGUAGE C)
+target_link_libraries(GeometryCentral)
 
 include_directories(include/geometrycentral/numerical)
 include_directories(include/geometrycentral/pointcloud)
