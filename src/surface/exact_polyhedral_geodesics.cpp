@@ -7,8 +7,9 @@
 #include <unordered_map>
 #include <unordered_set>
 
-#define _USE_MATH_DEFINES
-#include <cmath>
+#ifndef M_PI
+    #define M_PI 3.14159265358979323846
+#endif
 
 using std::cout;
 using std::endl;
