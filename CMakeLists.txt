@@ -20,6 +20,11 @@ set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
 add_definitions(-DNGC_SAFETY_CHECKS)
 
 
+if(MSVC)
+    set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS TRUE)
+    set(BUILD_SHARED_LIBS TRUE)
+endif()
+
 #================================
 # Dependencies
 #================================
@@ -173,7 +178,6 @@ add_library(GeometryCentral ${SRCS} ${HEADERS})
 
 set_target_properties(GeometryCentral PROPERTIES VERSION
     ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT_VERSION_PATCH})
-set_target_properties(GeometryCentral PROPERTIES LINKER_LANGUAGE C)
 target_link_libraries(GeometryCentral)
 
 include_directories(include/geometrycentral/numerical)
