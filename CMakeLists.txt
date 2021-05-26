@@ -193,6 +193,7 @@ include(InstallRequiredSystemLibraries)
 
 # Install libraries
 install(TARGETS GeometryCentral DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
+install(TARGETS GeometryCentral DESTINATION ${CMAKE_INSTALL_PREFIX}/bin)
 
 # Install include files
 install(DIRECTORY ${CMAKE_SOURCE_DIR}/include/geometrycentral/numerical DESTINATION ${CMAKE_INSTALL_PREFIX}/include)
