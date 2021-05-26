@@ -3,6 +3,9 @@
 
 #include "geometrycentral/utilities/elementary_geometry.h"
 
+#define _USE_MATH_DEFINES
+#include <cmath>
+
 
 namespace geometrycentral {
 namespace pointcloud {

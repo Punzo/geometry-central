@@ -11,6 +11,9 @@
 using std::cout;
 using std::endl;
 
+#define _USE_MATH_DEFINES
+#include <cmath>
+
 namespace geometrycentral {
 namespace surface {
 

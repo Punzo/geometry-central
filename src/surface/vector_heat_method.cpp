@@ -1,5 +1,8 @@
 #include "geometrycentral/surface/vector_heat_method.h"
 
+#define _USE_MATH_DEFINES
+#include <cmath>
+
 namespace geometrycentral {
 namespace surface {
 
